@@ -1,0 +1,14 @@
+﻿{
+    "product_name":  "Celestial Drive[ST07]",
+    "product_code":  "ST07",
+    "category":  "STARTER DECK",
+    "price": "PHP 9,999.99",
+    "sections":  [
+                     "starter-decks"
+                 ],
+    "description":  "\"Mobile Suit Gundam 00\" joins the game! Deploy Celestial Being’s Link Units and unleash battles just like in the original",
+    "source_url":  "https://www.gundam-gcg.com/asia-en/products/st07.html",
+    "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2025/11/19/JHM83MH1IBhgAus6/ST07mv_sp.webp",
+    "visible":  false,
+    "quantity_available":  1
+}

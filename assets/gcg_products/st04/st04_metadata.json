@@ -1,0 +1,14 @@
+﻿{
+    "product_name":  "SEED Strike [ST04]",
+    "product_code":  "ST04",
+    "category":  "STARTER DECK",
+    "price": "PHP 3900",
+    "sections":  [
+                     "starter-decks"
+                 ],
+    "description":  "A fateful encounter. Strike with the bonds of SEED. FEATURED CARDS Everything you need to start playing. Includes a pre-constructed",
+    "source_url":  "https://www.gundam-gcg.com/asia-en/products/st04.html",
+    "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/jp/news/2025/03/11/CtdqoN4LUpMuxrPf/ST04mv_sp.webp",
+    "visible":  true,
+    "quantity_available":  2
+}

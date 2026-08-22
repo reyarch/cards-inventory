@@ -67,7 +67,7 @@ foreach ($product in $products) {
   $pageUrl = $baseUrl + $product.Url
   $html = (Invoke-WebRequest -UseBasicParsing -Uri $pageUrl).Content
   $safeCode = ConvertTo-Slug $product.Code
-  $folderName = '{0:D2}_{1}' -f $index, $safeCode
+  $folderName = $safeCode
   $assetBaseName = $safeCode
   $folder = Join-Path $outputRoot $folderName
   New-Item -ItemType Directory -Force -Path $folder | Out-Null
@@ -105,12 +105,11 @@ foreach ($product in $products) {
     product_name = $sourceName
     product_code = $product.Code
     category = $product.Category
-    price_php = $null
+    price = 'PHP 9,999.99'
     sections = @()
     description = $description
     source_url = $pageUrl
     image_source_url = $imageUrl
-    pricing_note = 'The official source page does not publish a PHP price.'
   }
   $metadata | ConvertTo-Json -Depth 4 | Set-Content -Encoding UTF8 (Join-Path $folder "$assetBaseName`_metadata.json")
 }
