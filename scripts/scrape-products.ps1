@@ -67,7 +67,7 @@ foreach ($product in $products) {
   $pageUrl = $baseUrl + $product.Url
   $html = (Invoke-WebRequest -UseBasicParsing -Uri $pageUrl).Content
   $safeCode = ConvertTo-Slug $product.Code
-  $folderName = '{0:D2}_{1}' -f $index, $safeCode
+  $folderName = $safeCode
   $assetBaseName = $safeCode
   $folder = Join-Path $outputRoot $folderName
   New-Item -ItemType Directory -Force -Path $folder | Out-Null
