@@ -2,7 +2,7 @@
     "product_name":  "Deck Build Box Freedom Ascension [SC01]",
     "product_code":  "SC01",
     "category":  "ACCESSORIES",
-    "price": "PHP 9,999.99",
+    "price": "PHP 5000",
     "sections":  [
                      "build-box"
                  ],
@@ -10,5 +10,5 @@
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/deck-build-box.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2026/06/25/ENRlSqFG9hsRvy12/thumbnail_storageBOX-jp.webp",
     "visible":  false,
-    "quantity_available":  1
+    "quantity_available":  6
 }
