@@ -4,10 +4,12 @@
     "category":  "STARTER DECK",
     "price_php":  null,
     "sections":  [
-                     "latest-products"
+                     "starter-decks"
                  ],
-    "description":  "\"Mobile Suit Gundam 00\" joins the game! Deploy Celestial Being’s Link Units and unleash battles just like in the original series. FEATURED CARDS VIEW CARDS “Mobile Suit Gundam 00” joins the game! FEATURED SERIES Mobile Suit Gundam 00",
+    "description":  "\"Mobile Suit Gundam 00\" joins the game! Deploy Celestial Being’s Link Units and unleash battles just like in the original",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/st07.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2025/11/19/JHM83MH1IBhgAus6/ST07mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

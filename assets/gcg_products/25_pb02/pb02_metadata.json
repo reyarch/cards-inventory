@@ -4,10 +4,12 @@
     "category":  "PREMIUM BANDAI",
     "price_php":  null,
     "sections":  [
-
+                     "others"
                  ],
     "description":  "Official premium bandai product listed in the Gundam Card Game catalog.",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/pb02.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/jp/news/2025/10/07/Wcc9JlWPTysT9fqq/thumbnail_jp_05.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

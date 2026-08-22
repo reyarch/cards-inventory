@@ -4,10 +4,12 @@
     "category":  "BOOSTER PACK",
     "price_php":  null,
     "sections":  [
-
+                     "booster-boxes"
                  ],
-    "description":  "\"Special Cards\" reprinted with stunning new illustrations are here! Includes plenty of powered-up cards from previously featured series. FEATURED CARDS \"Mobile Suit Gundam: Iron-Blooded Orphans Urdr-Hunt\" joins the game! \"Mobile Suit Gundam 0080: War in the Pocket\" joins the game! FEATURED SERIES Mobile Suit Gundam: Iron-Blooded Orphans Urdr-Hunt Mobile Suit Gundam 0080: War in the Pocket",
+    "description":  "\"Special Cards\" reprinted with stunning new illustrations are here! Includes plenty of powered-up cards from previously featured series. FEATURED CARDS",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/gd03.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2025/11/19/XBKsw8CcPKn4T7up/GD03mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

@@ -4,10 +4,12 @@
     "category":  "STARTER DECK",
     "price_php":  null,
     "sections":  [
-
+                     "starter-decks"
                  ],
-    "description":  "4 types of starter decks are coming, each with a different “battle style”. A Blue‑Purple starter deck that includes many units skilled in underwater combat, such as “Char’s Z’gok”. In addition to being strong in 1‑on‑1 battles, it also contains many cards that truly shine in multiplayer matches.",
+    "description":  "4 types of starter decks are coming, each with a different “battle style”. A Blue‑Purple starter deck that includes many",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/st11.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2026/07/22/hLfHltbX8OgYgJTS/ST11mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  true,
+    "quantity_available":  1
 }

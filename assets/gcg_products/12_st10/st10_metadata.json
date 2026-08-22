@@ -4,10 +4,12 @@
     "category":  "STARTER DECK",
     "price_php":  null,
     "sections":  [
-
+                     "starter-decks"
                  ],
-    "description":  "A battle that transcends generations begins with cards. The “SD Gundam G Generation Eternal” × “Gundam Card Game” collaboration is here. FEATURED CARDS VIEW CARDS A collaboration Starter deck for “SD Gundam G Generation Eternal” is here! A collaboration product between the app game \"SD Gundam G Generation Eternal\" and \"GUNDAM CARD GAME\" has arrived. Collaboration Starter Deck for “SD Gundam G Generation Eternal” is here! Pilots and SD-style mobile suits from various Gundam series join the game. BOOSTER PACK “Eternal Nexus[EB01]” drops at the same time. This product contains numerous cards designed for multiplayer modes, such as team battles where two players form a team, and battle royale modes for up to four players.",
+    "description":  "A battle that transcends generations begins with cards. The “SD Gundam G Generation Eternal” × “Gundam Card Game” collaboration is",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/st10.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2026/03/23/GazP1qW6UjNEZrQf/ST10mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

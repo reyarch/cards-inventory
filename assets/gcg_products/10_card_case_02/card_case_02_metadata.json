@@ -4,10 +4,12 @@
     "category":  "ACCESSORIES",
     "price_php":  null,
     "sections":  [
-
+                     "others"
                  ],
     "description":  "July 25, 2026 1 type in total Deck Case: x1 Promotion Card: x2 Separator: x1",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/deck-case02.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2026/03/26/MU8toll5wwhlYM7Y/products_thumbnail_jp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

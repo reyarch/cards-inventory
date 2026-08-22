@@ -4,10 +4,12 @@
     "category":  "BOOSTER PACK",
     "price_php":  null,
     "sections":  [
-
+                     "booster-boxes"
                  ],
-    "description":  "\"Mobile Suit Victory Gundam\" and \"Turn A Gundam\" join the game. The will that has been engraved turns into a melody, echoing across the battlefield. FEATURED CARDS VIEW CARDS “Mobile Suit Victory Gundam” and “Turn A Gundam” joins the game! FEATURED SERIES Mobile Suit Victory Gundam Turn A Gundam",
+    "description":  "\"Mobile Suit Victory Gundam\" and \"Turn A Gundam\" join the game. The will that has been engraved turns into a",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/gd04.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2026/01/29/agUWYWKe8Ajc32og/GD04mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

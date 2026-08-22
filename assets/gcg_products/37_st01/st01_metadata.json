@@ -4,10 +4,12 @@
     "category":  "STARTER DECK",
     "price_php":  null,
     "sections":  [
-                     "latest-products"
+                     "starter-decks"
                  ],
-    "description":  "Heroes rise. A new chapter begins. FEATURED CARDS Everything you need to start playing. Includes a pre-constructed deck, damage card, playsheet, and more to start playing. Let\u0027s start the GUNDAM CARD GAME.",
+    "description":  "Heroes rise. A new chapter begins. FEATURED CARDS Everything you need to start playing. Includes a pre-constructed deck, damage card,",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/st01.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2025/06/20/TMBGd9pysADb4uEO/ST01-001.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

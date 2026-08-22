@@ -4,10 +4,12 @@
     "category":  "STARTER DECK",
     "price_php":  null,
     "sections":  [
-                     "latest-products"
+                     "starter-decks"
                  ],
-    "description":  "\"Mobile Suit Gundam: Hathaway\" joins the game! Seize victory with strategies blending Red\u0027s damage and Blue\u0027s balanced support. FEATURED CARDS VIEW CARDS \"Mobile Suit Gundam: Hathaway\u0027s Flash\"Joins the Battle! FEATURED SERIES Mobile Suit Gundam: Hathaway\u0027s Flash",
+    "description":  "\"Mobile Suit Gundam: Hathaway\" joins the game! Seize victory with strategies blending Red\u0027s damage and Blue\u0027s balanced support. FEATURED CARDS",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/st08.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2025/11/19/13hpC9C34qxHlMbr/ST08mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

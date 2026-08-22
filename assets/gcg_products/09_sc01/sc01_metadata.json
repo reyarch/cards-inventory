@@ -4,10 +4,12 @@
     "category":  "ACCESSORIES",
     "price_php":  null,
     "sections":  [
-                     "booster-decks"
+                     "build-box"
                  ],
-    "description":  "Includes 125 carefully selected reprinted cards (25 cards per color × 5 colors), allowing you to easily build a deck by combining just two colors. Also includes 8 packs of “Freedom Ascension [GD05]”, so you can customize your deck to your liking. Comes with Resource cards, Token cards, playsheet, half storage box (3 types *at random), and other accessories, plus a bonus pack featuring an exclusive EX Base lineup (3 types *at random), *All reprinted cards included in the Deck Build Box are standard, non-foil cards. Each bonus pack contains one EX Basecard with an exclusive illustration (3 types *at random).",
+    "description":  "Includes 125 carefully selected reprinted cards (25 cards per color × 5 colors), allowing you to easily build a deck",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/deck-build-box.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2026/06/25/ENRlSqFG9hsRvy12/thumbnail_storageBOX-jp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  true,
+    "quantity_available":  1
 }

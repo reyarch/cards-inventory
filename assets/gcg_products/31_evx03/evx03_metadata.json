@@ -4,10 +4,12 @@
     "category":  "ACCESSORIES",
     "price_php":  null,
     "sections":  [
-
+                     "others"
                  ],
     "description":  "September 20, 2025 ​ 2 types in total​ 1 pack contains: x70 sleeves",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/ev03.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/en/news/2025/06/17/yANgXUSJVRHEao7s/products_thumbnail.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

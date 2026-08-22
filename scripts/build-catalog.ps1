@@ -3,17 +3,13 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $productsRoot = Join-Path $root 'assets\gcg_products'
 $indexPath = Join-Path $root 'index.html'
-$sectionOrder = @('latest-products', 'upcoming-products', 'booster-decks', 'individual-cards', 'unassigned')
+$sectionOrder = @('starter-decks', 'booster-boxes', 'build-box', 'others')
 $sectionTitles = @{
-  'latest-products' = 'Latest Products'
-  'upcoming-products' = 'Upcoming Products'
-  'booster-decks' = 'Booster Boxes / Decks'
-  'individual-cards' = 'Individual Cards'
-  'unassigned' = 'Unassigned Inventory'
+  'starter-decks' = 'Starter Decks (ST)'
+  'booster-boxes' = 'Booster Boxes (GD)'
+  'build-box' = 'Build Box (SC)'
+  'others' = 'Others'
 }
-$defaultSections = @{}
-1..9 | ForEach-Object { $defaultSections[('ST{0:D2}' -f $_)] = 'latest-products' }
-$defaultSections['SC01'] = 'booster-decks'
 
 function Escape-Html([string]$value) {
   if ($null -eq $value) { return '' }
@@ -25,7 +21,8 @@ Get-ChildItem $productsRoot -Directory | ForEach-Object {
   $metadataFile = Get-ChildItem $_.FullName -Filter '*_metadata.json' | Select-Object -First 1
   if (-not $metadataFile) { return }
   $metadata = Get-Content $metadataFile.FullName -Raw | ConvertFrom-Json
-  $sections = @($metadata.sections | Where-Object { $_ })
+  if (-not $metadata.visible) { return }
+  $sections = @($metadata.sections | Where-Object { $_ -in $sectionOrder })
   $code = ([string]$metadata.product_code).ToUpperInvariant()
   if ($sections.Count -eq 0 -and $defaultSections.ContainsKey($code)) {
     $sections = @($defaultSections[$code])
@@ -39,6 +36,7 @@ Get-ChildItem $productsRoot -Directory | ForEach-Object {
     Category = [string]$metadata.category
     Description = [string]$metadata.description
     Price = $metadata.price_php
+    Quantity = if ($null -ne $metadata.quantity_available) { $metadata.quantity_available } else { 1 }
     Sections = $sections
     Folder = $_.Name
     Image = if ($imageFile) { $imageFile.Name } else { $null }
@@ -50,7 +48,8 @@ $products = $products | Sort-Object Name
 function Render-Card($product, $section) {
   $search = Escape-Html (($product.Name + ' ' + $product.Code + ' ' + $product.Category + ' ' + $product.Description).ToLowerInvariant())
   $image = if ($product.Image) { "./assets/gcg_products/$($product.Folder)/$($product.Image)" } else { '' }
-  $price = if ($null -ne $product.Price -and "$($product.Price)" -ne '') { "PHP $($product.Price)" } else { 'Price pending' }
+  $price = if ($null -ne $product.Price -and "$($product.Price)" -ne '') { "PHP $($product.Price)" } else { 'PHP 9,999.99' }
+  $quantity = if ($null -ne $product.Quantity -and "$($product.Quantity)" -ne '') { $product.Quantity } else { 1 }
   $link = if ($product.Source) { Escape-Html $product.Source } else { '#' }
   $imageMarkup = if ($image) { '<img src="' + (Escape-Html $image) + '" alt="' + (Escape-Html $product.Name) + '" loading="lazy">' } else { '<span>No image</span>' }
   return @"
@@ -60,6 +59,7 @@ function Render-Card($product, $section) {
               <p class="catalog-card-code">$(Escape-Html $product.Category) / $(Escape-Html $product.Code)</p>
               <h3>$(Escape-Html $product.Name)</h3>
               <p class="catalog-card-description">$(Escape-Html $product.Description)</p>
+              <p class="catalog-quantity">Quantity available: <strong>$(Escape-Html "$quantity")</strong></p>
               <div class="catalog-card-footer"><strong class="catalog-price">$(Escape-Html $price)</strong><a class="catalog-link" href="$link" target="_blank" rel="noreferrer">Source <ion-icon name="open-outline"></ion-icon></a></div>
             </div>
           </article>
@@ -68,7 +68,7 @@ function Render-Card($product, $section) {
 
 $sectionsHtml = ''
 foreach ($section in $sectionOrder) {
-  $sectionProducts = if ($section -eq 'unassigned') { @($products | Where-Object { @($_.Sections).Count -eq 0 }) } else { @($products | Where-Object { $section -in @($_.Sections) }) }
+  $sectionProducts = @($products | Where-Object { $section -in @($_.Sections) } | Sort-Object Code, Name)
   if ($sectionProducts.Count -eq 0) { continue }
   $cards = ($sectionProducts | ForEach-Object { Render-Card $_ $section }) -join ''
   $sectionsHtml += @"
@@ -85,7 +85,7 @@ $generated = @"
           <div><p class="inventory-kicker">GUNDAM CARD GAME / ARCHIVE</p><h1>Every product.<br><span>One archive.</span></h1><p class="catalog-intro">A complete product index built from the collection metadata. Browse sealed releases, accessories, and every unassigned item in one focused workspace.</p></div>
           <div class="catalog-stat"><strong>$($products.Count)</strong><span>cataloged products</span></div>
         </header>
-        <div class="catalog-toolbar"><input class="catalog-search" type="search" placeholder="Search products, codes, or categories" aria-label="Search products" data-catalog-search><select class="catalog-select" aria-label="Filter by section" data-catalog-filter><option value="all">All sections</option><option value="latest-products">Latest Products</option><option value="upcoming-products">Upcoming Products</option><option value="booster-decks">Booster Boxes / Decks</option><option value="individual-cards">Individual Cards</option><option value="unassigned">Unassigned Inventory</option></select></div>
+        <div class="catalog-toolbar"><input class="catalog-search" type="search" placeholder="Search products, codes, or categories" aria-label="Search products" data-catalog-search><select class="catalog-select" aria-label="Filter by section" data-catalog-filter><option value="all">All sections</option><option value="starter-decks">Starter Decks (ST)</option><option value="booster-boxes">Booster Boxes (GD)</option><option value="build-box">Build Box (SC)</option><option value="others">Others</option></select></div>
 $sectionsHtml
         <p class="catalog-no-results" data-catalog-no-results hidden>No products match this search.</p>
       </div>

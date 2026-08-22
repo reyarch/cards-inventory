@@ -4,10 +4,12 @@
     "category":  "STARTER DECK",
     "price_php":  null,
     "sections":  [
-                     "latest-products"
+                     "starter-decks"
                  ],
-    "description":  "“Mobile Suit Gundam: Iron-Blooded Orphans” joins the game! Wage a fierce battle with the new color, Purple. FEATURED CARDS VIEW CARDS “Mobile Suit Gundam IRON-BLOODED ORPHANS” joins the game! FEATURED SERIES Mobile Suit Gundam IRON-BLOODED ORPHANS x2 Legend Rare x14 Common",
+    "description":  "“Mobile Suit Gundam: Iron-Blooded Orphans” joins the game! Wage a fierce battle with the new color, Purple. FEATURED CARDS VIEW",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/st05.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2025/08/01/8QVyTMEY5bnH2fuu/ST05mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }

@@ -4,10 +4,12 @@
     "category":  "BOOSTER PACK",
     "price_php":  null,
     "sections":  [
-
+                     "booster-boxes"
                  ],
-    "description":  "This is a booster set celebrating the 1st anniversary of the Gundam Card Game. Highly popular mobile suits such as Strike Freedom Gundam and ν Gundam finally make their long‑awaited debut. FEATURED CARDS VIEW CARDS A promotional video celebrating the 1st anniversary of the “Gundam Card Game” has been released! “Mobile Fighter G Gundam” joins the game! Strike Freedom Gundam from “Mobile Suit Gundam SEED Destiny” arrives. “Mobile Suit Gundam Wing: Endless Waltz” joins the game! “Mobile Suit Gundam Char\u0027s Counterattack” joins the game! Key Points of the 1st Anniversary Booster Pack [GD05] Point 01: Powerful Mobile Suits join the lineup one after another! Many popular Mobile Suits from past series are included! Powerful cards that can serve as the core of your deck, including Strike Freedom Gundam, Gundam, and more, will appear one after another. The new “Link Rare” rarity, featuring linked Units and Pilots, makes its debut! These cards will be included as parallel cards of cards featured in this set, with special designs showcasing memorable pairings.",
+    "description":  "This is a booster set celebrating the 1st anniversary of the Gundam Card Game. Highly popular mobile suits such as",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/gd05.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2026/05/01/wnKvklSEjs1kgNVL/GD05mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price."
+    "pricing_note":  "The official source page does not publish a PHP price.",
+    "visible":  false,
+    "quantity_available":  1
 }
