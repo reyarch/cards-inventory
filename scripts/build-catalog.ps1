@@ -16,6 +16,13 @@ function Escape-Html([string]$value) {
   return [System.Net.WebUtility]::HtmlEncode($value)
 }
 
+function Get-DefaultSection([string]$code) {
+  if ($code -match '^ST\d+$') { return 'starter-decks' }
+  if ($code -match '^GD\d+$') { return 'booster-boxes' }
+  if ($code -match '^SC\d+$') { return 'build-box' }
+  return 'others'
+}
+
 $products = @()
 Get-ChildItem $productsRoot -Directory | ForEach-Object {
   $metadataFile = Get-ChildItem $_.FullName -Filter '*_metadata.json' | Select-Object -First 1
@@ -24,11 +31,7 @@ Get-ChildItem $productsRoot -Directory | ForEach-Object {
   if (-not $metadata.visible) { return }
   $sections = @($metadata.sections | Where-Object { $_ -in $sectionOrder })
   $code = ([string]$metadata.product_code).ToUpperInvariant()
-  if ($sections.Count -eq 0 -and $defaultSections.ContainsKey($code)) {
-    $sections = @($defaultSections[$code])
-    $metadata.sections = $sections
-    $metadata | ConvertTo-Json -Depth 5 | Set-Content -Encoding UTF8 $metadataFile.FullName
-  }
+  if ($sections.Count -eq 0) { $sections = @(Get-DefaultSection $code) }
   $imageFile = Get-ChildItem $_.FullName -Filter '*.jpg' | Select-Object -First 1
   $products += [pscustomobject]@{
     Name = [string]$metadata.product_name
@@ -93,8 +96,10 @@ $sectionsHtml
 
 $html = Get-Content $indexPath -Raw
 $pattern = '(?s)<!-- CATALOG_START -->.*?<!-- CATALOG_END -->'
+if (-not [regex]::IsMatch($html, $pattern)) { throw 'Catalog markers were not found in index.html.' }
 $replacement = "<!-- CATALOG_START -->`r`n$generated        <!-- CATALOG_END -->"
 $updated = [regex]::Replace($html, $pattern, $replacement, 1)
-if ($updated -eq $html) { throw 'Catalog markers were not found in index.html.' }
-Set-Content -Path $indexPath -Value $updated -Encoding UTF8
+$updated = $updated.TrimEnd("`r", "`n") + "`r`n"
+$utf8 = New-Object System.Text.UTF8Encoding($true)
+[System.IO.File]::WriteAllText($indexPath, $updated, $utf8)
 Write-Host "Built $($products.Count) products into index.html"
