@@ -2,14 +2,13 @@
     "product_name":  "Generation Pulse [ST10]",
     "product_code":  "ST10",
     "category":  "STARTER DECK",
-    "price_php":  null,
+    "price": "PHP 9,999.99",
     "sections":  [
                      "starter-decks"
                  ],
     "description":  "A battle that transcends generations begins with cards. The “SD Gundam G Generation Eternal” × “Gundam Card Game” collaboration is",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/st10.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2026/03/23/GazP1qW6UjNEZrQf/ST10mv_sp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price.",
     "visible":  false,
     "quantity_available":  1
 }

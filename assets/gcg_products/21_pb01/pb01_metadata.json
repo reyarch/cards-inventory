@@ -2,14 +2,13 @@
     "product_name":  "PREMIUM GOODS SET -Mobile Suit Gundam Wing- [PB01]",
     "product_code":  "PB01",
     "category":  "PREMIUM BANDAI",
-    "price_php":  null,
+    "price": "PHP 9,999.99",
     "sections":  [
                      "others"
                  ],
     "description":  "January 24, 2026~ *Details may vary by region. Please contact your local distributor.",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/pb01.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2025/10/08/JZtBXVynigcQPDDn/thumbnail_jp_01.webp",
-    "pricing_note":  "The official source page does not publish a PHP price.",
     "visible":  false,
     "quantity_available":  1
 }

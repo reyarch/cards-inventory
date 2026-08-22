@@ -2,14 +2,13 @@
     "product_name":  "Heroic Beginnings [ST01]",
     "product_code":  "ST01",
     "category":  "STARTER DECK",
-    "price_php":  null,
+    "price": "PHP 9,999.99",
     "sections":  [
                      "starter-decks"
                  ],
     "description":  "Heroes rise. A new chapter begins. FEATURED CARDS Everything you need to start playing. Includes a pre-constructed deck, damage card,",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/st01.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/asia-en/news/2025/06/20/TMBGd9pysADb4uEO/ST01-001.webp",
-    "pricing_note":  "The official source page does not publish a PHP price.",
-    "visible":  false,
-    "quantity_available":  1
+    "visible":  true,
+    "quantity_available":  2
 }

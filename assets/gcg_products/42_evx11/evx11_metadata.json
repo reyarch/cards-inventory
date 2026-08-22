@@ -2,14 +2,13 @@
     "product_name":  "Official Playmat \u0026 Card Set Athrun \u0026 Cagalli [EVX11]",
     "product_code":  "EVX11",
     "category":  "ACCESSORIES",
-    "price_php":  null,
+    "price": "PHP 9,999.99",
     "sections":  [
                      "others"
                  ],
     "description":  "Please check the BANDAI CARD GAMES Fest 26-27 Official Website for release dates for each venue. Playmat: x1​ EX Resource",
     "source_url":  "https://www.gundam-gcg.com/asia-en/products/evx11.html",
     "image_source_url":  "https://www.gundam-gcg.com/gcg/bccard/jp/news/2026/08/03/qn8PgMJP9ZzwC4EG/products_thumbnail_jp.webp",
-    "pricing_note":  "The official source page does not publish a PHP price.",
     "visible":  false,
     "quantity_available":  1
 }

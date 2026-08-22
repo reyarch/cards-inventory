@@ -3,6 +3,7 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $productsRoot = Join-Path $root 'assets\gcg_products'
 $indexPath = Join-Path $root 'index.html'
+$defaultPrice = 'PHP 9,999.99'
 $sectionOrder = @('starter-decks', 'booster-boxes', 'build-box', 'others')
 $sectionTitles = @{
   'starter-decks' = 'Starter Decks (ST)'
@@ -38,7 +39,7 @@ Get-ChildItem $productsRoot -Directory | ForEach-Object {
     Code = $code
     Category = [string]$metadata.category
     Description = [string]$metadata.description
-    Price = $metadata.price_php
+    Price = if ($null -ne $metadata.price -and "$($metadata.price)" -ne '') { [string]$metadata.price } else { $defaultPrice }
     Quantity = if ($null -ne $metadata.quantity_available) { $metadata.quantity_available } else { 1 }
     Sections = $sections
     Folder = $_.Name
@@ -51,7 +52,7 @@ $products = $products | Sort-Object Name
 function Render-Card($product, $section) {
   $search = Escape-Html (($product.Name + ' ' + $product.Code + ' ' + $product.Category + ' ' + $product.Description).ToLowerInvariant())
   $image = if ($product.Image) { "./assets/gcg_products/$($product.Folder)/$($product.Image)" } else { '' }
-  $price = if ($null -ne $product.Price -and "$($product.Price)" -ne '') { "PHP $($product.Price)" } else { 'PHP 9,999.99' }
+  $price = if ($product.Price) { [string]$product.Price } else { $defaultPrice }
   $quantity = if ($null -ne $product.Quantity -and "$($product.Quantity)" -ne '') { $product.Quantity } else { 1 }
   $link = if ($product.Source) { Escape-Html $product.Source } else { '#' }
   $imageMarkup = if ($image) { '<img src="' + (Escape-Html $image) + '" alt="' + (Escape-Html $product.Name) + '" loading="lazy">' } else { '<span>No image</span>' }
